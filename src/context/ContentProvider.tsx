@@ -24,6 +24,10 @@ export const ContentProvider = ({ children }: { children: React.ReactNode }) => 
 
   useEffect(() => {
     const fetchContent = async () => {
+      if (!db) {
+        setLoading(false);
+        return;
+      }
       try {
         const docRef = doc(db, 'siteContent', 'main');
         const docSnap = await getDoc(docRef);

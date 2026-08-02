@@ -2,6 +2,7 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '../firebase';
 
 export const logVisitor = async () => {
+  if (!db) return;
   try {
     // Check if we've already logged this session to prevent spamming
     if (sessionStorage.getItem('visitorLogged')) {

@@ -11,7 +11,17 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const db = getFirestore(app);
+// Initialize Firebase safely
+let app;
+let auth: any;
+let db: any;
+
+if (firebaseConfig.apiKey) {
+  app = initializeApp(firebaseConfig);
+  auth = getAuth(app);
+  db = getFirestore(app);
+} else {
+  console.warn("Firebase is not configured. Admin panel will not work.");
+}
+
+export { auth, db };
