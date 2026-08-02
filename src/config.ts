@@ -107,7 +107,7 @@ export const config = {
             title: "WEB DEVELOPMENT",
             description: "Modern web development & secure applications",
             details: "Building responsive and performant web applications using React and Tailwind CSS. Implementing secure coding practices from the ground up.",
-            tools: ["React.js", "JavaScript", "Tailwind CSS", "Node.js", "HTML", "CSS"]
+            tools: ["React.js", "JavaScript", "Tailwind CSS", "Node.js", "HTML", "CSS", "VS Code"]
         }
     }
 };

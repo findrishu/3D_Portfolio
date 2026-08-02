@@ -18,100 +18,68 @@
         @media print {
             body {
                 box-shadow: none;
-                padding: 0;
+                padding: 10px 20px;
+                margin: 0;
+                max-width: 100%;
+                font-size: 11px;
+                line-height: 1.3;
             }
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-size: 32px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .subtitle {
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-        .contact-info a {
-            color: #2980b9;
-            text-decoration: none;
-            margin: 0 5px;
-        }
-        h2 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 30px;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
-        .section-content {
-            margin-bottom: 20px;
-        }
-        .job-title {
-            font-weight: bold;
-            font-size: 16px;
-            color: #2c3e50;
-        }
-        .company {
-            font-style: italic;
-            color: #7f8c8d;
-        }
-        .date-location {
-            float: right;
-            color: #7f8c8d;
-            font-size: 14px;
-        }
-        .skills-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills-list li {
-            margin-bottom: 8px;
-        }
-        .skills-list strong {
-            display: inline-block;
-            width: 200px;
-            color: #2c3e50;
-        }
-        ul {
-            padding-left: 20px;
-            margin-top: 5px;
-        }
-        .project-title {
-            font-weight: bold;
-            color: #2c3e50;
-            margin-top: 15px;
-        }
-        .download-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-            border: none;
-            font-size: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .download-btn:hover {
-            background-color: #2980b9;
-        }
-        @media print {
+            @page {
+                size: A4;
+                margin: 8mm;
+            }
+            h1 {
+                font-size: 22px;
+                margin-bottom: 2px;
+                margin-top: 0;
+            }
+            .subtitle {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+            .contact-info {
+                margin-bottom: 10px;
+                font-size: 11px;
+            }
+            h2 {
+                font-size: 14px;
+                margin-top: 10px;
+                margin-bottom: 4px;
+                padding-bottom: 2px;
+            }
+            .section-content {
+                margin-bottom: 6px;
+            }
+            .section-content p {
+                margin: 2px 0;
+                font-size: 11px;
+                line-height: 1.3;
+            }
+            .job-title {
+                font-size: 12px;
+            }
+            .date-location {
+                font-size: 11px;
+            }
+            .skills-list li {
+                margin-bottom: 2px;
+                font-size: 11px;
+            }
+            .skills-list strong {
+                width: 160px;
+            }
+            .project-title {
+                margin-top: 6px;
+                font-size: 12px;
+            }
+            ul {
+                margin: 2px 0;
+                padding-left: 16px;
+            }
+            ul li {
+                font-size: 11px;
+                margin-bottom: 2px;
+            }
             .download-btn {
                 display: none !important;
             }
@@ -151,7 +119,7 @@
             <li><strong>Programming Languages:</strong> C, Black Hat Python (Basics)</li>
             <li><strong>Web Development:</strong> HTML, CSS, JavaScript (Learning)</li>
             <li><strong>Cybersecurity:</strong> Web Penetration Testing, Jr. Network Penetration Testing, OSINT, Google Dorking, VAPT</li>
-            <li><strong>Tools & Technologies:</strong> Linux, Burp Suite, Nmap, Wireshark, Metasploit, Recon-ng, Maltego, Git/GitHub</li>
+            <li><strong>Tools & Technologies:</strong> Linux, Burp Suite, Nmap, Wireshark, Metasploit, Recon-ng, Maltego, Git/GitHub, VS Code</li>
         </ul>
     </div>
 

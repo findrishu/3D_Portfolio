@@ -97,7 +97,7 @@ const TechStackNew = () => {
           {techStack.map((row, rowIndex) => (
             <div key={rowIndex} className="techstack-row">
               {row.map((tech, techIndex) => {
-                const knownTech = ["HTML", "CSS", "Git", "GitHub", "Python", "C", "MySQL", "MS Office", "Photoshop"];
+                const knownTech = ["HTML", "CSS", "Git", "GitHub", "Python", "C", "MySQL", "MS Office", "Photoshop", "VS Code"];
                 const isKnown = knownTech.includes(tech.name);
                 return (
                   <a
