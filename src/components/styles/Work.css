@@ -348,10 +348,32 @@
 
   .see-all-works p {
     font-size: 14px;
-  }
 }
 
+/* Click to Preview Badge */
+.work-preview-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
 
+.work-image-in:hover .work-preview-badge {
+  opacity: 1;
+}
 
 /* Fullscreen Project Modal */
 .project-modal-overlay {
