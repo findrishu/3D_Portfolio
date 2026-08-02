@@ -54,6 +54,8 @@ const Scene = () => {
       let progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
+      let headRotationEnabled = false;
+
       loadCharacter().then((gltf) => {
         if (gltf) {
           const animations = setAnimations(gltf);
@@ -68,6 +70,10 @@ const Scene = () => {
             setTimeout(() => {
               light.turnOnLights();
               animations.startIntro();
+              // Enable head rotation after intro animation (approx 3.5s)
+              setTimeout(() => {
+                headRotationEnabled = true;
+              }, 3500);
             }, 2500);
           });
           window.addEventListener("resize", () =>
@@ -82,7 +88,7 @@ const Scene = () => {
       const onMouseMove = (event: MouseEvent) => {
         handleMouseMove(event, (x, y) => (mouse = { x, y }));
       };
-      let debounce: number | undefined;
+      let debounce: any;
       const onTouchStart = (event: TouchEvent) => {
         const element = event.target as HTMLElement;
         debounce = setTimeout(() => {
@@ -109,7 +115,7 @@ const Scene = () => {
       }
       const animate = () => {
         requestAnimationFrame(animate);
-        if (headBone) {
+        if (headBone && headRotationEnabled) {
           handleHeadRotation(
             headBone,
             mouse.x,

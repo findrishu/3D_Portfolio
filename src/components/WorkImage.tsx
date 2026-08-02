@@ -6,6 +6,7 @@ interface Props {
   alt?: string;
   video?: string;
   link?: string;
+  iframeUrl?: string;
 }
 
 const WorkImage = (props: Props) => {
@@ -31,13 +32,25 @@ const WorkImage = (props: Props) => {
         target="_blank"
         data-cursor={"disable"}
       >
-        {props.link && (
+        {props.link && !props.iframeUrl && (
           <div className="work-link">
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+        {props.iframeUrl ? (
+          <>
+            <img src={props.image} alt={props.alt} style={{ opacity: 0 }} />
+            <iframe 
+              src={props.iframeUrl} 
+              title={props.alt} 
+              style={{ width: '100%', height: '100%', border: 'none', position: 'absolute', top: 0, left: 0, zIndex: 5, pointerEvents: 'auto', borderRadius: '10px' }} 
+              sandbox="allow-scripts allow-same-origin"
+            />
+          </>
+        ) : (
+          <img src={props.image} alt={props.alt} />
+        )}
+        {isVideo && !props.iframeUrl && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>
   );

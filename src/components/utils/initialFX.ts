@@ -73,15 +73,15 @@ export function initialFX() {
     }
   );
 
-  var landingText3 = new TextSplitter(".landing-h2-info-1", TextProps);
-  var landingText4 = new TextSplitter(".landing-h2-1", TextProps);
-  var landingText5 = new TextSplitter(".landing-h2-2", TextProps);
+  // var landingText3 = new TextSplitter(".landing-h2-info-1", TextProps);
+  // var landingText4 = new TextSplitter(".landing-h2-1", TextProps);
+  // var landingText5 = new TextSplitter(".landing-h2-2", TextProps);
 
-  LoopText(landingText2, landingText3);
-  LoopText(landingText4, landingText5);
+  // LoopText(landingText2, landingText3);
+  // LoopText(landingText4, landingText5);
 }
 
-function LoopText(Text1: TextSplitter, Text2: TextSplitter) {
+export function LoopText(Text1: TextSplitter, Text2: TextSplitter) {
   var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
   const delay = 4;
   const delay2 = delay * 2 + 1;

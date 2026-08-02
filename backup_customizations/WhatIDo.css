@@ -45,7 +45,7 @@
 
 .what-box-in {
   flex-direction: column;
-  height: 600px;
+  height: 550px;
   margin-left: 200px;
   position: relative;
   display: flex;
@@ -64,14 +64,14 @@
 
 .what-noTouch:hover,
 .what-content-active {
-  min-height: 75%;
+  min-height: 67%;
   padding: 40px 50px;
 }
 
 .what-noTouch:hover~.what-content,
 .what-box-in:hover .what-noTouch:not(:hover),
 .what-content.what-sibling {
-  min-height: 25%;
+  min-height: 33%;
   padding: 10px 50px;
 }
 
@@ -289,7 +289,7 @@
   }
 
   .what-box-in {
-    height: 480px;
+    height: 400px;
   }
 
   .what-content h3 {
@@ -339,7 +339,7 @@
   }
 
   .what-box-in {
-    height: 550px;
+    height: 500px;
     margin-left: -50px;
   }
 
@@ -354,14 +354,14 @@
 
   .what-noTouch:hover,
   .what-content-active {
-    min-height: 75%;
+    min-height: 67%;
     padding: 50px;
   }
 
   .what-noTouch:hover~.what-content,
   .what-box-in:hover .what-noTouch:not(:hover),
   .what-content.what-sibling {
-    min-height: 25%;
+    min-height: 33%;
     padding: 10px 50px;
   }
 }
@@ -397,7 +397,7 @@
 
   .what-box-in {
     margin-left: 0px;
-    height: 500px;
+    height: 450px;
   }
 
   .what-content h5,

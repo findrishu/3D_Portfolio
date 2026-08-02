@@ -120,7 +120,7 @@
   cursor: pointer;
 }
 
-.techstack-item:hover {
+.techstack-item:hover, .techstack-known {
   transform: translateY(-6px) scale(1.08);
   background: rgba(194, 164, 255, 0.1);
   border-color: var(--accentColor);
@@ -136,7 +136,7 @@
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-.techstack-item:hover img {
+.techstack-item:hover img, .techstack-known img {
   filter: none;
   opacity: 1;
 }
@@ -152,7 +152,7 @@
   max-width: 50px;
 }
 
-.techstack-item:hover span {
+.techstack-item:hover span, .techstack-known span {
   color: #fff;
 }
 

@@ -96,20 +96,24 @@ const TechStackNew = () => {
         <div className="techstack-pyramid">
           {techStack.map((row, rowIndex) => (
             <div key={rowIndex} className="techstack-row">
-              {row.map((tech, techIndex) => (
-                <a
-                  key={techIndex}
-                  href={tech.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="techstack-item"
-                  title={tech.name}
-                  data-cursor="disable"
-                >
-                  <img src={tech.icon} alt={tech.name} />
-                  <span>{tech.name}</span>
-                </a>
-              ))}
+              {row.map((tech, techIndex) => {
+                const knownTech = ["HTML", "CSS", "Git", "GitHub", "Python", "C", "MySQL", "MS Office", "Photoshop"];
+                const isKnown = knownTech.includes(tech.name);
+                return (
+                  <a
+                    key={techIndex}
+                    href={tech.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`techstack-item ${isKnown ? 'techstack-known' : ''}`}
+                    title={tech.name}
+                    data-cursor="disable"
+                  >
+                    <img src={tech.icon} alt={tech.name} />
+                    <span>{tech.name}</span>
+                  </a>
+                );
+              })}
             </div>
           ))}
         </div>

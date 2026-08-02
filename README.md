@@ -1,99 +1,80 @@
-# 🚀 3D Developer Portfolio Website (React + TypeScript + Three.js)
+# 🚀 Rahul's 3D Interactive Portfolio
 
-[![3D portfolio preview (click to watch video)](./Screenshot_2026-04-08_22-10-00.png)](./screen-capture%20(13).webm)
+A modern, high-performance **3D developer portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, **Tailwind CSS**, and **Firebase**. 
 
-A modern, high-performance **3D developer portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
-
-If you’re a developer looking for a **portfolio template** that feels premium, interactive, and memorable—this repo is for you.
-
-> Live preview: https://www.redoyanulhaque.me/
+This project isn't just a static portfolio—it features a fully functional, secure **Admin Panel** to manage content dynamically and track live visitors!
 
 ---
 
-## ✨ Highlights
+## ✨ Key Features
 
-- **3D / WebGL experience** powered by **Three.js**
-- Smooth animations with **GSAP**
-- Modern **React + TypeScript** codebase
-- Fast, responsive UI (desktop + mobile)
-- Designed for developers, engineers, programmers, and creators
+- **🎨 3D / WebGL Experience:** Stunning visual effects powered by **Three.js** and **React Three Fiber**.
+- **⚡ Smooth Animations:** High-end scroll animations built with **GSAP**.
+- **🛡️ Secure Admin Panel:** Protected by Firebase Authentication. Update your portfolio content (projects, tech stack) on the fly without changing code.
+- **📊 Live Visitor Analytics:** Tracks visitors, their OS, and approximate locations securely using Firestore. (Built with OWASP security standards).
+- **💎 Premium UI:** Redesigned Admin dashboard using **Tailwind CSS Glassmorphism** techniques.
+- **💪 Type-Safe:** Fully refactored into **Strict TypeScript** for maximum reliability and maintainability.
+- **📱 Fully Responsive:** Optimized for both desktop and mobile viewing.
 
 ---
 
 ## 🧰 Tech Stack
 
-- **React**
-- **TypeScript**
-- **Three.js / WebGL**
-- **GSAP**
-- **HTML / CSS / JavaScript**
+**Frontend:**
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+- Three.js / WebGL
+- GSAP
+
+**Backend / Database:**
+- Firebase Authentication
+- Cloud Firestore (Realtime DB)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (Local Development)
 
-### 1) Clone
+### 1) Clone the Repository
 
 ```bash
-git clone https://github.com/red1-for-hek/portfolio-website.git
-cd portfolio-website
+git clone https://github.com/your-username/your-repo-name.git
+cd "your-repo-name"
 ```
 
-### 2) Install
+### 2) Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3) Run locally
+### 3) Set up Environment Variables
+Create a `.env` file in the root directory and add your Firebase configuration:
+```env
+VITE_FIREBASE_API_KEY=your_api_key
+VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+```
+
+### 4) Run the Dev Server
 
 ```bash
 npm run dev
 ```
 
-### 4) Build
-
-```bash
-npm run build
-```
+Your main portfolio will run at `http://localhost:5173/` 
+Your secure Admin Panel will be at `http://localhost:5173/admin`
 
 ---
 
-## 🧩 Customize (Quick Guide)
-
-Typical things you’ll want to update:
-
-- **Your name + hero section text**
-- **Projects list**
-- **Social links** (GitHub, LinkedIn, email)
-- **SEO meta title/description**
+## 🔒 Security Best Practices Implemented
+- **HSTS Headers** enabled via `vercel.json`
+- **Firestore Security Rules** drafted restricting read/write access to authenticated admins only.
+- **Sanitized Inputs** for visitor tracking to prevent injection attacks (OWASP A03:2021).
+- **Tailwind Preflight Disabled** to protect legacy global CSS styling from accidental overrides.
 
 ---
-
-## ⭐ Support
-
-If you found this useful:
-
-- Please **star** the repository (it helps a lot)
-- Share it with a friend who needs a portfolio template
-- Sponsor via the **Sponsor** button on GitHub (if available in your region)
-
----
-
-## 🤝 Connect
-
-- LinkedIn: https://www.linkedin.com/in/red1-for-hek/
-
----
-
-## 🏷️ Recommended GitHub Topics (add in repo settings)
-
-Add these topics to improve GitHub search visibility:
-
-`portfolio` `developer-portfolio` `portfolio-website` `portfolio-template` `3d-portfolio` `react` `typescript` `threejs` `webgl` `gsap` `frontend` `vite`
-
----
-
-## 🪪 License
-
-This project is open source and available under the **MIT License**. See [LICENSE](LICENSE).
+*Designed & Maintained by Rahul Sharma*

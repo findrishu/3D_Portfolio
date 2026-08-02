@@ -2,17 +2,17 @@ export const config = {
     developer: {
         name: "Rahul",
         fullName: "Rahul Sharma",
-        title: "Ethical Hacker | Web Developer",
-        description: "Motivated and fast-learning fresher with a dual interest in Cyber Security / Ethical Hacking and Web Development."
+        title: "Cyber Security Intern & Web Developer",
+        description: "Ethical Hacker & Web Developer passionate about securing systems and building robust web applications. I break things to fix them."
     },
     social: {
         github: "findrishu",
         email: "rahulsharma82972@gmail.com",
-        location: "Faridabad, Haryana - 121003"
+        location: "India"
     },
     about: {
         title: "About Me",
-        description: "Motivated and fast-learning fresher with a dual interest in Cyber Security / Ethical Hacking and Web Development. Hands-on exposure to ethical hacking and web penetration testing (Burp Suite basics), along with front-end web development using HTML, CSS and Git/GitHub. Comfortable using AI tools to accelerate development and learning. Strong leadership qualities, currently pursuing additional certifications to strengthen technical skills."
+        description: "I'm Rahul Sharma, an Ethical Hacker & Cyber Security enthusiast who also loves building sleek, modern web applications. I believe the best developers are the ones who think like attackers — writing code with security as a first principle. I am actively seeking internship opportunities to gain hands-on experience with web penetration testing, vulnerability assessment, and secure development practices."
     },
     experiences: [
         {
