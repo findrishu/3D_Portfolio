@@ -8,16 +8,27 @@ const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
 const MyWorks = lazy(() => import("./pages/MyWorks"));
 const Play = lazy(() => import("./pages/Play"));
+const AdminLogin = lazy(() => import("./pages/admin/AdminLogin"));
+const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
 import { LoadingProvider } from "./context/LoadingProvider";
+import { logVisitor } from "./utils/visitorTracker";
+import { useEffect } from "react";
+
+import { ContentProvider } from "./context/ContentProvider";
 
 const App = () => {
+  useEffect(() => {
+    logVisitor();
+  }, []);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <LoadingProvider>
+    <ContentProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <LoadingProvider>
               <Suspense>
                 <MainContainer>
                   <Suspense>
@@ -44,10 +55,27 @@ const App = () => {
             </Suspense>
           }
         />
+        <Route
+          path="/admin"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AdminLogin />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <AdminDashboard />
+            </Suspense>
+          }
+        />
       </Routes>
       <Analytics />
       <SpeedInsights />
-    </BrowserRouter>
+      </BrowserRouter>
+    </ContentProvider>
   );
 };
 

@@ -3,8 +3,11 @@ import "./styles/WhatIDo.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { config } from "../config";
 
+import { useContent } from "../context/ContentProvider";
+
 const WhatIDo = () => {
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
+  const { skills } = useContent();
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
@@ -128,7 +131,7 @@ const WhatIDo = () => {
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                {config.skills.design.tools.map((tool, index) => (
+                {skills.map((tool, index) => (
                   <div key={index} className="what-tags">{tool}</div>
                 ))}
               </div>

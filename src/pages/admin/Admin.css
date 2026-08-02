@@ -1,0 +1,157 @@
+.admin-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundColor, #000);
+  color: #fff;
+  font-family: "Geist", sans-serif;
+  padding: 20px;
+}
+
+.admin-card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.admin-dashboard-card {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.admin-card h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: var(--accentColor, #c2a4ff);
+  text-align: center;
+}
+
+.admin-form-group {
+  margin-bottom: 20px;
+}
+
+.admin-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.admin-form-group input,
+.admin-form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.admin-form-group input:focus,
+.admin-form-group textarea:focus {
+  outline: none;
+  border-color: var(--accentColor, #c2a4ff);
+}
+
+.admin-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--accentColor, #c2a4ff);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.admin-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-error {
+  background-color: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  color: #ff6b6b;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Dashboard specific styles */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.admin-header button {
+  width: auto;
+  padding: 10px 20px;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.admin-tab {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.admin-tab.active {
+  background-color: #222;
+  color: var(--accentColor, #c2a4ff);
+}
+
+.admin-table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 15px;
+  border-bottom: 1px solid #222;
+}
+
+.admin-table th {
+  color: #888;
+  font-weight: 500;
+}
+
+.admin-table tr:hover td {
+  background-color: #1a1a1a;
+}
