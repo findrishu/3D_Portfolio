@@ -29,9 +29,9 @@ const Landing = ({ children }: PropsWithChildren) => {
               <div className="landing-h2-info">{config.developer.title.split('|')[1] ? config.developer.title.split('|')[1].trim() : ''}</div>
             </h2>
           </div>
-          {/* Mobile photo - shows only on mobile when 3D character is hidden */}
+          {/* Mobile photo removed as requested */}
           <div className="mobile-photo">
-            <img src="/images/mypicnbg.png" alt={config.developer.fullName} />
+            {/* You can add your own photo here later! */}
           </div>
         </div>
         {children}
