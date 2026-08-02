@@ -56,9 +56,6 @@ const MyWorks = () => {
                     }}
                     loading="lazy"
                   />
-                  <div className="work-preview-badge" style={{ opacity: 1 }}>
-                    Click to Preview
-                  </div>
                 </>
               ) : (
                 <img src={project.image} alt={project.title} />

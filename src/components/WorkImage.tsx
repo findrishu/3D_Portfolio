@@ -58,7 +58,6 @@ const WorkImage = (props: Props) => {
           )}
           {props.iframeUrl ? (
             <>
-              <div className="work-preview-badge">Click to Preview</div>
               <iframe
                 src={props.iframeUrl}
                 title={props.alt}
