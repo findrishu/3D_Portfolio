@@ -20,21 +20,24 @@ export const config = {
             company: "SparkIIT",
             period: "July 2026 - August 2026",
             location: "Agartala, Tripura (Remote)",
-            description: "Selected for a project-based internship to apply practical cybersecurity knowledge in a structured environment."
+            description: "Selected for a project-based internship to apply practical cybersecurity knowledge in a structured environment.",
+            images: ["/images/certificates/sparkiit_offer_1.jpg", "/images/certificates/sparkiit_offer_2.jpg"]
         },
         {
             position: "Certified Ethical Hacker (CPCEH)",
             company: "Cyber Pathshala",
             period: "May 2026",
             location: "Online",
-            description: "Completed Next-Gen AI Cybersecurity Training Program (45+ Hours) with Grade A+. Certificate ID: CPCEH-2605013."
+            description: "Completed Next-Gen AI Cybersecurity Training Program (45+ Hours) with Grade A+. Certificate ID: CPCEH-2605013.",
+            images: ["/images/certificates/cpceh.jpg"]
         },
         {
             position: "Getting Started with Generative AI",
             company: "IBM SkillsBuild",
             period: "July 2026",
             location: "Online",
-            description: "Completed modules covering Foundations in Generative AI, Introduction to Large Language Models, and Ethical Considerations for Generative AI."
+            description: "Completed modules covering Foundations in Generative AI, Introduction to Large Language Models, and Ethical Considerations for Generative AI.",
+            images: ["/images/certificates/ibm_genai.jpg", "/images/certificates/ibm_genai_modules.jpg"]
         },
         {
             position: "Freelance Baby & Newborn Photographer",
@@ -54,7 +57,8 @@ export const config = {
             company: "Prudent Academy",
             period: "May 2019 - August 2019",
             location: "Faridabad, Haryana",
-            description: "Comprehensive training in MS Word, Excel, PowerPoint, Access, and Internet. Achieved Grade A."
+            description: "Comprehensive training in MS Word, Excel, PowerPoint, Access, and Internet. Achieved Grade A.",
+            images: ["/images/certificates/prudent_academy.jpg"]
         }
     ],
     projects: [

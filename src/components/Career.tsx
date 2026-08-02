@@ -30,7 +30,20 @@ const Career = () => {
                 </div>
                 <h3>{getDisplayYear(exp.period)}</h3>
               </div>
-              <p>{exp.description}</p>
+              <div className="career-desc-certs">
+                <p>{exp.description}</p>
+                {/* @ts-ignore */}
+                {exp.images && exp.images.length > 0 && (
+                  <div className="career-certificates">
+                    {/* @ts-ignore */}
+                    {exp.images.map((img, i) => (
+                      <a href={img} target="_blank" rel="noopener noreferrer" key={i}>
+                        <img src={img} alt={`${exp.company} Certificate`} className="career-certificate-img" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
