@@ -25,7 +25,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     // Redirect if not logged in
-    const unsubscribe = auth.onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged((user: any) => {
       if (!user) {
         navigate('/admin');
       } else {
