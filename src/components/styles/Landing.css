@@ -6,7 +6,7 @@
 /* Show 3D character on mobile too */
 @media only screen and (max-width: 768px) {
   .character-model {
-    pointer-events: auto;
+    display: none !important;
   }
 
   .landing-section,
