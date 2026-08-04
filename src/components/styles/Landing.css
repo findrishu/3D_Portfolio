@@ -7,7 +7,6 @@
 @media only screen and (max-width: 768px) {
   .character-model {
     pointer-events: auto;
-    z-index: 15 !important;
   }
 
   .landing-section,
@@ -124,7 +123,7 @@
     display: none;
   }
 
-  /* Show mobile photo space but hide the static image so the 3D robot can be seen */
+  /* Show mobile photo */
   .mobile-photo {
     display: block;
     position: relative !important;
@@ -146,7 +145,6 @@
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 40px rgba(194, 164, 255, 0.4));
-    opacity: 0; /* Hide static image, keep layout space */
   }
 }
 
