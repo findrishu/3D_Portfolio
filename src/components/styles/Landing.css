@@ -6,13 +6,8 @@
 /* Show 3D character on mobile too */
 @media only screen and (max-width: 768px) {
   .character-model {
-    position: absolute !important;
-    height: 60vh !important;
-    bottom: -5vh !important;
-    transform: translateX(-50%) scale(0.9) !important;
-    left: 50% !important;
-    z-index: 1;
     pointer-events: auto;
+    z-index: 15 !important;
   }
 
   .landing-section,
@@ -129,9 +124,21 @@
     display: none;
   }
 
-  /* Hide mobile photo if 3D character is visible */
+  /* Show mobile photo space but hide the static image so the 3D robot can be seen */
   .mobile-photo {
-    display: none !important;
+    display: block;
+    position: relative !important;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    z-index: 1;
+    order: 2;
+    /* Second: Photo */
+    /* Add fade mask to bottom */
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    pointer-events: none;
+    transform: none !important;
   }
 
   .mobile-photo img {
@@ -139,6 +146,7 @@
     height: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 40px rgba(194, 164, 255, 0.4));
+    opacity: 0; /* Hide static image, keep layout space */
   }
 }
 
