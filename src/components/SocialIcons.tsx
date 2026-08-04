@@ -4,13 +4,16 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
+import { MdClose, MdOpenInNew } from "react-icons/md";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HoverLinks from "./HoverLinks";
 import { config } from "../config";
 
 const SocialIcons = () => {
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
+
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
 
@@ -58,36 +61,80 @@ const SocialIcons = () => {
   }, []);
 
   return (
-    <div className="icons-section">
-      <div className="social-icons" data-cursor="icons" id="social">
-        <span>
-          <a href={config.contact.github} target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-          </a>
-        </span>
-        <span>
-          <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer">
-            <FaLinkedinIn />
-          </a>
-        </span>
-        <span>
-          <a href={config.contact.twitter} target="_blank" rel="noopener noreferrer">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href={config.contact.instagram} target="_blank" rel="noopener noreferrer">
-            <FaInstagram />
-          </a>
-        </span>
+    <>
+      <div className="icons-section">
+        <div className="social-icons" data-cursor="icons" id="social">
+          <span>
+            <a href={config.contact.github} target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </a>
+          </span>
+          <span>
+            <a href={config.contact.linkedin} target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn />
+            </a>
+          </span>
+          <span>
+            <a href={config.contact.twitter} target="_blank" rel="noopener noreferrer">
+              <FaXTwitter />
+            </a>
+          </span>
+          <span>
+            <a href={config.contact.instagram} target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+          </span>
+        </div>
+        <a 
+          className="resume-button" 
+          href="/Rahul_Sharma_Resume.html" 
+          onClick={(e) => {
+            e.preventDefault();
+            setIsResumeOpen(true);
+          }}
+        >
+          <HoverLinks text="RESUME" />
+          <span>
+            <TbNotes />
+          </span>
+        </a>
       </div>
-      <a className="resume-button" href="/Rahul_Sharma_Resume.html" target="_blank" rel="noopener noreferrer">
-        <HoverLinks text="RESUME" />
-        <span>
-          <TbNotes />
-        </span>
-      </a>
-    </div>
+
+      {isResumeOpen && (
+        <div className="resume-modal-overlay" onClick={() => setIsResumeOpen(false)}>
+          <div className="resume-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="resume-modal-header">
+              <h3>Resume Preview</h3>
+              <div className="resume-modal-actions">
+                <a
+                  href="/Rahul_Sharma_Resume.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="resume-modal-open"
+                  data-cursor="disable"
+                >
+                  <MdOpenInNew /> Open
+                </a>
+                <button
+                  className="resume-modal-close"
+                  onClick={() => setIsResumeOpen(false)}
+                  data-cursor="disable"
+                >
+                  <MdClose />
+                </button>
+              </div>
+            </div>
+            <div className="resume-modal-body">
+              <iframe
+                src="/Rahul_Sharma_Resume.html"
+                title="Resume"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

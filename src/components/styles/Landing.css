@@ -6,16 +6,13 @@
 /* Show 3D character on mobile too */
 @media only screen and (max-width: 768px) {
   .character-model {
-    position: relative !important;
-    height: 50vh !important;
-    min-height: 350px !important;
-    bottom: auto !important;
-    transform: none !important;
-    left: auto !important;
-    order: 2;
-    pointer-events: auto;
+    position: absolute !important;
+    height: 60vh !important;
+    bottom: -5vh !important;
+    transform: translateX(-50%) scale(0.9) !important;
+    left: 50% !important;
     z-index: 1;
-    margin: -30px auto;
+    pointer-events: auto;
   }
 
   .landing-section,
